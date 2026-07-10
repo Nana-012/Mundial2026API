@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
-using Mundial2026API.Models;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
+using FluentAssertions;
+using Mundial2026API.Models;
 using Xunit;
 
 namespace Mundial2026API.Tests;
@@ -109,5 +109,7 @@ public class SeleccionControllerTests
                 "/api/selecciones");
 
         selecciones.Should().HaveCount(4);
+        
+        
     }
 }

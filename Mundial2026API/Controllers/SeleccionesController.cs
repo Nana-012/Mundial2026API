@@ -28,7 +28,7 @@ public class SeleccionesController : ControllerBase
         var seleccion = await _context.Selecciones.FindAsync(id);
 
         if (seleccion == null)
-            return NotFound();
+            return NotFound(new { mensaje = $"Selección con ID {id} no encontrada." });
 
         return seleccion;
     }
@@ -60,7 +60,8 @@ public class SeleccionesController : ControllerBase
         var seleccion = await _context.Selecciones.FindAsync(id);
 
         if (seleccion == null)
-            return NotFound();
+          return NotFound();
+
 
         _context.Selecciones.Remove(seleccion);
         await _context.SaveChangesAsync();
