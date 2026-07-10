@@ -28,7 +28,7 @@ public class SeleccionesController : ControllerBase
         var seleccion = await _context.Selecciones.FindAsync(id);
 
         if (seleccion == null)
-            return NotFound(new { mensaje = $"Selección con ID {id} no encontrada." });
+            return NotFound();
 
         return seleccion;
     }
