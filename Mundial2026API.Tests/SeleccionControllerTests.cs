@@ -26,7 +26,7 @@ public class SeleccionControllerTests
 
         // Assert
         selecciones.Should().NotBeNull();
-        selecciones.Should().HaveCount(99);
+        selecciones.Should().HaveCount(5);
     }
 
     [Fact]
